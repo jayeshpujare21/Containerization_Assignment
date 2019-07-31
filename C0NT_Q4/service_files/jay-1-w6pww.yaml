@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2019-07-31T14:05:07Z
+  generateName: jay-1-
+  labels:
+    app: jay-1
+  name: jay-1-w6pww
+  namespace: default
+  resourceVersion: "2114"
+  selfLink: /api/v1/namespaces/default/services/jay-1-w6pww
+  uid: 33682903-b39c-11e9-80cd-42010af0000e
+spec:
+  clusterIP: 10.0.112.249
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32022
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: jay-1
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

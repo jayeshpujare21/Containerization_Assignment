@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2019-07-31T14:05:36Z
+  generateName: jay-1-
+  labels:
+    app: jay-1
+  name: jay-1-6tq5b
+  namespace: default
+  resourceVersion: "2353"
+  selfLink: /api/v1/namespaces/default/services/jay-1-6tq5b
+  uid: 4516aa4c-b39c-11e9-80cd-42010af0000e
+spec:
+  clusterIP: 10.0.118.196
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32065
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: jay-1
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.237.153.62
